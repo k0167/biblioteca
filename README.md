@@ -1,26 +1,72 @@
-## Getting Started
+## Projeto Biblioteca em JAVA
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Bom dia meu nobre, Esse projeto representa uma tentativa de utilização do JDBC especificamente para o Postgres de forma a aprender como criar conexões DAOs Models e tudo mais no padrão MVC do JAVA
 
-## Folder Structure
+## Estrutura de arquivos
 
-The workspace contains two folders by default, where:
+O projeot possui dois principais diretorios
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- `src`: onde está todo o source do projeto
+- `lib`: onde está as depências (embora não possua nenhuma kkkkkk)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+De qualquer forma, siga as instruções abaixo para executar:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Configurando Execução
+1 - Primeiramente você vai precisar possuir o JDBC do Postgres e o JavaFX, então dê um jeito de baixar eles :)
 
-## Dependency Management
+Utilizado nesse projeto foi o JDBC `postgresql-42.3.4.jar`
+e o JavaFX foi o `javafx-sdk-18.0.1`
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Ambos foram baixados no site oficial então é só dar uma googleada aí
+
+2 - Tenha certeza que você importou as dependências, em sua pasta .vscode verifique as seguintes configurações:
+
+seu arquivo launch.json deve estar assim:
+
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "vmArgs": "--module-path D:/Java_projects/javafx-sdk-18.0.1/lib --add-modules javafx.controls,javafx.fxml",
+        }
+    ]
+}
+```
+mude o caminho  para onde seu JavaFX estã salvo "vmArgs": "--module-path `D:/Java_projects/javafx-sdk-18.0.1/lib` --add-modules javafx.controls,javafx.
+
+Seu arquivo settings.json precisa estar assim
+
+```
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "D:/Java_projects/javafx-sdk-18.0.1/lib/**/*.jar",
+        "D:/Java_projects/postgresql-42.3.4.jar"
+    ]
+}
+```
+Mude os caminhos `"D:/Java_projects/javafx-sdk-18.0.1/lib/**/*.jar"`,
+                 `"D:/Java_projects/postgresql-42.3.4.jar"`
+                 para onde suas dependências estão salvas
+
+3 - Bom agora tu precisa configurar o banco. 
+    Todo o banco de dados foi feito por meio do PgMyAdmin, então eu recomento que seja feito pelo mesmo lugar.
+    Basta abrir o banco de dados e executar o arquivo `banco.sql` (voce pode so copiar e colar ele dentro do query editor e rodar)
+
+4 Pronto, feito isso na teoria seu programa deve rodar :)
+Só de precaução irei deixar o zip do arquivo junto do repositorio, para caso queira ter certeza de todas configurações.
+
 
 Como ustilizar o programa:
 
-Não tem muito segredo os bot~es são bem intuitivos onde
-
+Não tem muito segredo os botôes são bem intuitivos onde
 
 Inserir -> insere novo registro
 
