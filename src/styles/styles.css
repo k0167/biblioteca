@@ -1,0 +1,56 @@
+
+/*
+.body{
+  -fx-background-color: black;
+}
+.label{
+  -fx-font-size: 12;
+  -fx-font-family: "Arial";
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+}
+.textField{
+  -fx-background-color: black;
+  -fx-font-size: 14;
+  -fx-font-family: "Arial";  
+  -fx-border-style: hidden dotted dotted hidden;
+  -fx-border-width: 2px;
+  -fx-border-color: red;
+  -fx-border-radius: 5px;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+}
+
+.textArea{
+  -fx-control-inner-background:black;
+  -fx-font-size: 12px;
+  -fx-font-weight: normal;
+}
+
+.button{
+  -fx-background-color: black;
+  -fx-font-size: 14px;
+  -fx-font-family: "Arial";  
+  -fx-border-style: dotted;
+  -fx-border-color: red ;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+}
+
+.buttonBad{
+  -fx-background-color: red;
+  -fx-border-color: white ;
+  -fx-text-fill: black;
+}
+.buttonGood{
+  -fx-background-color: aquamarine;
+  -fx-border-color: white ;
+  -fx-text-fill: black;
+}
+
+.button:hover{
+  -fx-background-color: red;
+  -fx-border-color: white ;
+  -fx-text-fill: black;
+  -fx-cursor: hand;
+}*/
